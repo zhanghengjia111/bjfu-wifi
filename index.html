@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b6b57">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="BJFU WiFi">
+  <title>BJFU WiFi · 校园网重连</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero"><div class="mark">B</div><div><p class="eyebrow">BEIJING FORESTRY UNIVERSITY</p><h1>BJFU WiFi</h1><p class="subtitle">校园网快速重连</p></div></section>
+    <section class="card">
+      <form id="loginForm" method="get" action="http://10.1.1.10/drcom/login">
+        <input type="hidden" name="callback" value="dr1003"><input type="hidden" name="0MKKey" value="123456"><input type="hidden" name="R1" value="0"><input type="hidden" name="R2" value=""><input type="hidden" name="R3" value="0"><input type="hidden" name="R6" value="0"><input type="hidden" name="para" value="00"><input type="hidden" name="v6ip" value=""><input type="hidden" name="terminal_type" value="1"><input type="hidden" name="type" value="1"><input type="hidden" name="lang" value="zh-cn"><input type="hidden" name="jsVersion" value="4.1"><input type="hidden" name="v" id="nonce">
+        <label for="account">校园网账号</label><input id="account" name="DDDDD" autocomplete="username" inputmode="numeric" placeholder="输入学号" required>
+        <label for="password">密码</label><input id="password" name="upass" type="password" autocomplete="current-password" placeholder="输入密码" required>
+        <label class="check"><input id="rememberPassword" type="checkbox"><span>记住密码 <small>仅保存在本机浏览器</small></span></label>
+        <label class="check"><input id="autoReconnect" type="checkbox"><span>打开页面时自动重连</span></label>
+        <button type="submit">重新连接校园网 <span>→</span></button>
+      </form>
+      <p id="status" class="status" role="status">准备就绪 · 请确认已连接 BJFU WiFi</p>
+    </section>
+    <section class="tools"><button id="clear" class="text-button">清除本地凭据</button><button id="reconfigure" class="text-button">重新配置</button></section>
+    <details><summary>连接状态说明</summary><p>本页面不会上传或收集账号密码。点击连接后，Safari 会原生导航到校园网认证地址；认证返回页可能会短暂显示，这是正常现象。</p><p>若页面打不开，请先在系统 Wi‑Fi 设置中确认已连接 BJFU WiFi，再重新打开本页面。</p></details>
+    <p class="privacy">密码默认不保存。开启“记住密码”后，仅使用本机浏览器存储。</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
